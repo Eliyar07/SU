@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Для WebKit-браузеров (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 6px; /* Тонкий */
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Тёмный, но не чернее ночи */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444; /* Серый, не уголь */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Чуть светлее при наведении */
+}
+
+/* Для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1e1e1e;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(16, 16, 16);
+    font-family:sans-serif;
+    color: white;
+}
+
+
+body.locked {
+    overflow: hidden; /* Блокирует прокрутку */
+    pointer-events: none; /* Запрещает кликать по сайту */
+}
+
+#warning-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Затемнение */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: all; /* Разрешает взаимодействие с предупреждением */
+}
+
+.warning-box {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.warning-box button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.warning-box button:hover {
+    background: #cc0000;
+}
+
+
+
+
+#lit {
+    display:block;
+    width: 10%;
+    transition: all 0.5s ease;
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(360deg);
+    }
+  }
+
+.home {
+    display: flex;
+    justify-content: flex;
+    margin-top: -10rem;
+    background-color: rgb(20, 20, 20);
+}
+
+#xuesos {
+    margin-top: 25%;
+    visibility: hidden;
+}
+
+.info {
+    margin-top: 15%;
+    margin-left: 25%;
+}
+
+.info h1 {
+    width: 55%;
+    color:red;
+}
+
+.info img {
+    width: 20%;
+    margin-left: 25rem;
+    margin-top: -10rem;
+}
+
+.shmara-knopka {
+     background-color: rgb(131, 0, 0);
+     color: white;
+     border: none;
+     width: 12rem;
+     height: 3rem;
+     border-radius: 23rem;
+     font-family:'Times New Roman', Times, serif;
+     transition-duration: 0.5s;
+}
+
+.shmara-knopka:hover {
+    background-color: red;
+    box-shadow: 0px 0px 10px 6px red;
+    
+}
+
+
+#main {
+    margin-top: 15%;
+}
+
+#pidor {
+    margin-top: 1%;
+}
+
+
+.employee-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.employee-card {
+    display: flex;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 600px;
+    height: 250px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    margin: auto;
+}
+
+.employee-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+.employee-info h2 {
+    font-size: 26px;
+    margin: 0;
+}
+
+.employee-info p {
+    font-size: 20px;
+    margin: 5px 0 0;
+    opacity: 0.8;
+}
+
+
+#sponsors {
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.sponsor-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sponsor-list img {
+    height: 50px;
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.sponsor-list img:hover {
+    filter: brightness(1);
+}
+
+
+#whore-prices {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+    border: 2px solid rgba(255, 0, 0, 0.7);
+}
+
+#whore-prices h2 {
+    margin-bottom: 20px;
+    color: #ff4444;
+    font-size: 24px;
+}
+
+.price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.price-item:hover {
+    background: rgba(255, 0, 0, 0.4);
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+
+.PIDORAS {
+    margin-top: 15%;
+}

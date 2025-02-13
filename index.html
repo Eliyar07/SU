@@ -1,0 +1,125 @@
+<!-- bY - dk -->
+<!DOCTYPE html>
+<html lang="kz">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/ea2eb47a587b36f4100c1751062f7a70.jpg">
+    <title>Shmara Uralsk</title>
+</head>
+
+<body>
+    <audio id="bg-music" loop>
+        <source src="./audi/litvin-zhy-shi-mp3.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+    <div id="warning-overlay">
+        <div class="warning-box">
+            <p>Этот сайт никому не хочет навредить или оскорбить! Все совпадения случайны!</p>
+            <button id="close-warning">ОК.</button>
+        </div>
+    </div>   
+    <img id="lit" src="./img/classic.png" alt="litenergy">
+    <div class="home">
+        <div class="info">
+            <h1>Лучшая шмара уральска, отсосала более 1000 членов.</h1>
+            <h2>Всего за 200 тенге она ваша на час!</h2>
+            <a id="abtnzhm" href="#main"><button class="shmara-knopka">↓↓↓ Жми Жми Жми ↓↓↓</button></a>
+            <img src="./img/shmara.jpeg" alt="shmara">
+            <hr id="xuesos">
+        </div>
+    </div>
+    <div id="main" class="maininfor">
+        <div id="ec" class="employee-card">
+            <img src="./img/shmara.jpeg" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-info">
+                <h2>Елемесова Айзада Елемескызы</h2>
+                <h3>Возраст: 30 лет</h3>
+                <p>+7 707 355 7450</p>
+            </div>
+        </div>
+        <div id="pidor"></div>
+        <section id="whore-prices">
+            <h2>Прайс-лист</h2>
+            <div class="price-list">
+                <div class="price-item">
+                    <span>Легкий разговор</span>
+                    <span>5₸</span>
+                </div>
+                <div class="price-item">
+                    <span>Разговор с матами</span>
+                    <span>10₸</span>
+                </div>
+                <div class="price-item">
+                    <span>РАЗ НА РАЗ</span>
+                    <span>50₸</span>
+                </div>
+                <div class="price-item">
+                    <span>Доминирование на хуе</span>
+                    <span>100₸</span>
+                </div>
+                <div class="price-item">
+                    <span>ФУЛЛ Комплекс с отсосом</span>
+                    <span>500₸</span>
+                </div>
+            </div>
+        </section>
+        <div class="PIDORAS"></div>
+        <footer id="sponsors">
+            <h2>Наши спонсоры</h2>
+            <div class="sponsor-list">
+                <img src="./img/images.png" alt="Спонсор 1">
+                <img src="https://wkitu.kz/wp-content/themes/newsup/images/business_logo.png" alt="Спонсор 2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Pornhub-logo.svg/1200px-Pornhub-logo.svg.png" alt="Спонсор 3">
+            </div>
+        </footer>             
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.getElementById("warning-overlay");
+    const closeButton = document.getElementById("close-warning");
+
+    
+    document.body.classList.add("locked");
+
+    closeButton.addEventListener("click", function () {
+        overlay.style.display = "none";
+        document.body.classList.remove("locked");
+    });
+});
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("bg-music");
+    audio.volume = 1;
+
+    if (localStorage.getItem("musicPlaying") === "true") {
+        audio.play().catch(() => {
+            console.log("Автоиграние заблокировано. Требуется пользовательское взаимодействие.");
+        });
+    }
+
+    audio.addEventListener("play", () => {
+        localStorage.setItem("musicPlaying", "true");
+    });
+
+    audio.addEventListener("pause", () => {
+        localStorage.setItem("musicPlaying", "false");
+    });
+
+    document.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+        }
+    }, { once: true });
+});
+
+</script>
+</html>
+
+
+<!-- хули чекаешь хуило -->
+ 
